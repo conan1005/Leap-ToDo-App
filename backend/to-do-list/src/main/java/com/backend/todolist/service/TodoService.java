@@ -27,7 +27,7 @@ public class TodoService {
 	private TodoPagingRepository todoPagingRepository;
 	
 	public Todo create(TodoCreateRequest todoCreateRequest, String username) {
-		Todo todo = new Todo(todoCreateRequest.getTitle(), todoCreateRequest.getTargetDate(), username);
+		Todo todo = new Todo(todoCreateRequest.getTitle(),todoCreateRequest.getDescription(), todoCreateRequest.getTargetDate(), username);
 		return todoRepository.save(todo);
 	}
 	
@@ -80,6 +80,7 @@ public class TodoService {
 		}
 		
 		todo.setTitle(todoUpdateRequest.getTitle());
+		todo.setDescription(todoUpdateRequest.getDescription());
 		todo.setTargetDate(todoUpdateRequest.getTargetDate());
 		return todoRepository.save(todo);
 	}

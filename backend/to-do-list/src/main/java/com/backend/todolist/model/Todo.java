@@ -18,6 +18,11 @@ public class Todo {
 	@NotEmpty(message = "Title is required")
 	private String title;
 
+
+	@NotEmpty(message = "Descripption is required")
+	private String description;
+
+
 	@NotNull(message = "Target date is required")
 	private Date targetDate;
 	
@@ -29,9 +34,10 @@ public class Todo {
 		
 	}
 	
-	public Todo(String title, Date targetDate, String username) {
+	public Todo(String title, String description, Date targetDate, String username) {
 		super();
 		this.title = title;
+		this.description = description;
 		this.targetDate = targetDate;
 		this.username = username;
 		this.isCompleted = false;
@@ -75,6 +81,14 @@ public class Todo {
 
 	public void setIsCompleted(boolean isCompleted) {
 		this.isCompleted = isCompleted;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	@Override
