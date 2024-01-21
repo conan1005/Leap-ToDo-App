@@ -37,7 +37,7 @@ function Signin({isAuthenticated, setIsAuthenticated}) {
     setErrorMessage('');
     setMessage('Sign in successful');
     await timeout(1000);
-    history.push("/");
+    history.push("/todo");
   }
 
   useEffect(() => {

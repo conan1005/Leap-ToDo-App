@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 import moment from 'moment';
 import { useHistory } from "react-router-dom";
 import EditIcon from '@mui/icons-material/Edit';
+import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Todo from "./Todo";
-
+import {Grid} from "@mui/material";
+import Card from "@mui/material/Card";
+import styles from './ViewTodos.module.css';
 function Todos({ isAuthenticated, setIsAuthenticated }) {
 	const [todos, setTodos] = useState([]);
 	const [changed, setChanged] = useState(false);
@@ -213,13 +216,25 @@ function Todos({ isAuthenticated, setIsAuthenticated }) {
 			{filterControl()}
 			{sortControl()} {/* Add the new sort control here */}
 
+			<Grid container spacing={3}>
+				{todos.map((todo) => (
+					<Grid item key={todo.id}>
+						<Card className={`${styles.box} ${todo.isCompleted ? styles.completed : ''}`}>
+							<Todo todo={todo} markCompleted={markCompleted} deleteTodo={deleteTodo}/>
+						</Card>
+					</Grid>
+				))}
+				<Grid item className={styles.add}>
+					<Card className={styles.iconbox} onClick={() => history.push("/add")}>
+						<div className={styles.iconContainer}>
+							<AddIcon className={styles.addIcon} />
+						</div>
+					</Card>
+				</Grid>
+			</Grid>
 
-			{todos.map((todo) => (
-				<Todo todo={todo} markCompleted={markCompleted} deleteTodo={deleteTodo}/>
-			))}
-
-			{pageSizeControl()}
-			{pageNumberControl()}
+			{/*{pageSizeControl()}*/}
+			{/*{pageNumberControl()}*/}
 		</div>
 	);
 }

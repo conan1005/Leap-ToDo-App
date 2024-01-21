@@ -1,46 +1,13 @@
-/*.box {*/
-/*    border: 2px solid #ddd;*/
-/*    border-radius: 8px;*/
-/*    padding: 16px;*/
-/*    margin-bottom: 16px;*/
-/*    background-color: #fff;*/
-/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
-/*    max-width: 300px; !* Adjust as needed *!*/
-/*    margin: auto; !* Center the box *!*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: flex-start;*/
-/*}*/
-
-/*.header {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
-
-/*.checkbox {*/
-/*    margin-right: 8px;*/
-/*    vertical-align: middle;*/
-/*}*/
-
-/*.icon {*/
-/*    cursor: pointer;*/
-/*    margin-left: 8px;*/
-/*    font-size: 20px;*/
-/*    color: #888;*/
-/*}*/
-/* Todo.module.css */
-.box {
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px; /* Adjust as needed */
-    margin: auto; /* Center the box */
+.todoContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between; /* Add this line */
+    height: 100%; /* Add this line */
+}
+
+.todo {
+    width: 100%;
 }
 
 .header {
@@ -50,8 +17,10 @@
     width: 100%;
 }
 
-.checkbox {
-    margin-right: 8px;
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px; /* Adjust as needed */
 }
 
 .titleContainer {
@@ -73,8 +42,12 @@
     margin-top: 8px;
 }
 
-.actions {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 8px;
+.checkbox {
+    margin-right: 8px;
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+.checkbox:hover {
+    cursor: pointer;
 }

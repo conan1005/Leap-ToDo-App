@@ -10,3 +10,7 @@ a:hover {
    color: rgb(159, 159, 255);
    text-decoration: none;
 }
+
+body {
+    background-color: lightskyblue;
+}
