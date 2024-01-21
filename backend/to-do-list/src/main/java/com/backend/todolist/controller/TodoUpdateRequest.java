@@ -19,7 +19,7 @@ public class TodoUpdateRequest {
 		
 	}
 
-	public TodoUpdateRequest(String title,String description, Date targetDate) {
+	public TodoUpdateRequest(String title, String description, Date targetDate) {
 		super();
 		this.title = title;
 		this.description = description;
