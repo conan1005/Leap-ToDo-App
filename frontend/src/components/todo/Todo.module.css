@@ -1,0 +1,80 @@
+/*.box {*/
+/*    border: 2px solid #ddd;*/
+/*    border-radius: 8px;*/
+/*    padding: 16px;*/
+/*    margin-bottom: 16px;*/
+/*    background-color: #fff;*/
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+/*    max-width: 300px; !* Adjust as needed *!*/
+/*    margin: auto; !* Center the box *!*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: flex-start;*/
+/*}*/
+
+/*.header {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.checkbox {*/
+/*    margin-right: 8px;*/
+/*    vertical-align: middle;*/
+/*}*/
+
+/*.icon {*/
+/*    cursor: pointer;*/
+/*    margin-left: 8px;*/
+/*    font-size: 20px;*/
+/*    color: #888;*/
+/*}*/
+/* Todo.module.css */
+.box {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Adjust as needed */
+    margin: auto; /* Center the box */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.checkbox {
+    margin-right: 8px;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.dueDate {
+    font-size: 14px;
+    color: #888;
+}
+
+.description {
+    margin-top: 8px;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
