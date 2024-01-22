@@ -270,6 +270,15 @@ import Todo from "./Todo";
 import {Grid} from "@mui/material";
 import Card from "@mui/material/Card";
 import styles from './ViewTodos.module.css';
+function getDate() {
+	const today = new Date();
+	const month = today.getMonth() + 1;
+	const year = today.getFullYear();
+	const date = today.getDate();
+	const day = today.getDay();
+	const arr = ["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+	return `${arr[day]}, ${date}/${month}/${year}`;
+}
 function Todos({ isAuthenticated, setIsAuthenticated }) {
 	const [todos, setTodos] = useState([]);
 	const [changed, setChanged] = useState(false);
@@ -518,7 +527,7 @@ function Todos({ isAuthenticated, setIsAuthenticated }) {
 
 	return (
 		<div className="container">
-			<h1 className="text-center">Todo List</h1>
+			<h1 className="text-center">{getDate()}</h1>
 			{showErrorMessage()}
 
 			{filterControl()}

@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between; /* Add this line */
-    height: 100%; /* Add this line */
+    justify-content: space-between;
+    height: 100%;
 }
 
 .todo {
@@ -64,8 +64,10 @@
 
 .actions {
     margin-left: auto;
+
 }
 
 .actions button {
     /* styles for buttons inside actions */
+    margin: 5px;
 }

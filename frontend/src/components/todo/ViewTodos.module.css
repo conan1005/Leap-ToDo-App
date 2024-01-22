@@ -26,18 +26,18 @@
     display: flex;
     flex-direction: column;
     /*align-items: center; !* Center content horizontally *!*/
-    border-radius: 20px;
+    border-radius: 30px !important;
 
 }
 .dueToday {
-    background-color: yellow !important;
+    background-color: #ffffb3 !important;
 }
 
 .overdue {
-    background-color: red !important;
+    background-color: #fdb2b2 !important;
 }
 .completed {
-    background-color: lightgreen !important;
+    background-color: #b3ffb3 !important;
 }
 
 
@@ -45,8 +45,8 @@
     height: 300px;
     width: 300px;
     padding: 16px;
-    margin-bottom: 16px;
-    background-color: #fff;
+    margin-bottom: 16px ;
+    background-color: #acd3ff !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 300px; /* Adjust as needed */
     /*margin: auto; !* Center the box *!*/
@@ -54,8 +54,12 @@
     flex-direction: column;
     align-items: center; /* Center content horizontally */
     justify-content: center; /* Center content vertically */
+    border-radius: 30px !important;
 }
 
+.iconbox:hover{
+    background-color: #92b2fd !important;
+}
 .iconContainer {
     text-align: center;
 }
@@ -63,6 +67,8 @@
 .addIcon {
     font-size: 60px; /* Adjust the size as needed */
     color: #555; /* Adjust the color as needed */
+
+
 }
 
 .header {
