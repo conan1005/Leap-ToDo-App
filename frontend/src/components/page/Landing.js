@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import styles from './Landing.module.css';
 
 export default function Landing({isAuthenticated, setIsAuthenticated}) {
   const [message, setMessage] = useState('')
@@ -65,7 +66,7 @@ export default function Landing({isAuthenticated, setIsAuthenticated}) {
   }, [isAuthenticated, numberAllTodo, numberAllTodoNotCompleted])
 
 	return (
-		<div className="text-center">
+		<div className={styles.heading}>
 			<h1>Todo List Application</h1>
       {showErrorMessage()}
 			{message}

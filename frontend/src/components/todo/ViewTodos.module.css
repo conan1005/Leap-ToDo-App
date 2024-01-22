@@ -107,6 +107,25 @@
     margin-top: 8px;
 }
 
+.sortFilter{
+    display : flex;
+    justify-content: flex-end;
+    margin: 20px 0  20px;
+    /*left:5px;*/
+}
+
+.sortBy{
+    margin-left:20px;
+}
+
+.show{
+    margin-right: 10px;
+    font-weight: bold;
+}
+.heading{
+    text-align: center;
+    margin-top: 20px;
+}
 
 
 
